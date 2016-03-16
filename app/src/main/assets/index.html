@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function alertDialog(){
+            alert("this is a dialog");
+        }
+
+        function showOrHide(isHide){
+            var x = document.getElementById('div');
+            if(isHide==0)
+                x.className = "hide";
+            else
+                x.className = "show";
+        }
+        function  jsCallJava(){
+            jsInterface.javaFunction();
+        }
+    </script>
+
+    <style type="text/css">
+        .hide {
+        display:none;
+        background-color: aqua ;
+        }
+        .show{
+        background-color: aqua ;
+        width:  200px ;
+        height: 200px;
+        }
+    </style>
+</head>
+<body>
+<p>This is a test !</p>
+<div id="div" class="show"></div>
+<input type="submit" value="取消" onclick="showOrHide(0)" >
+<input type="submit" value="显示" onclick="showOrHide(1)" >
+<input type="submit" value="OK" onclick="jsCallJava()" >
+</body>
+</html>
